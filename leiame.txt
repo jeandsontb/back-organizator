@@ -1,0 +1,12 @@
+para confirmar as instruções no readme
+
+criar a imagem do postgres
+sudo docker pull postgres
+
+criar o container
+sudo docker run --name some-postgres -e POSTGRES_USER=postgres -e POSTGRES_PASSWORD=123456 -e POSTGRES_DB=contacts_db -p 5432:5432 -d postgres
+
+
+migration para criar o banco 
+
+npx typeorm migration:create ./src/migration/create_table_user
